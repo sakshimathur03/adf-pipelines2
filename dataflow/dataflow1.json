@@ -12,13 +12,18 @@
 					"name": "productSchema"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "sinkBlob"
+				}
+			],
 			"transformations": [
 				{
-					"name": "Markup"
-				},
-				{
-					"name": "derivedColumn1"
+					"name": "CalcualtedMarkup"
 				}
 			],
 			"scriptLines": [
@@ -32,8 +37,17 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> productSchema",
-				"productSchema derive(Markup = Price/Quantity) ~> Markup",
-				"Markup derive() ~> derivedColumn1"
+				"productSchema derive(Markup = Price/Quantity) ~> CalcualtedMarkup",
+				"CalcualtedMarkup sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          commitInfo as (timestamp as integer, userId as string, userName as string, operation as string, operationParameters as (partitionBy as string, clusterBy as string, description as string, isManaged as string, properties as string, statsOnLoad as boolean), isolationLevel as string, isBlindAppend as boolean, operationMetrics as (numFiles as string, numOutputRows as string, numOutputBytes as string), tags as (noRowsCopied as string, restoresDeletedRows as string), engineInfo as string, txnId as string),",
+				"          metaData as (id as string, description as string, format as (provider as string, options as ({} as string)), schemaString as string, partitionColumns as string[], configuration as ({delta.checkpoint.writeStatsAsStruct} as string, {delta.checkpoint.writeStatsAsJson} as string, {delta.enableDeletionVectors} as string), createdTime as integer),",
+				"          protocol as (minReaderVersion as integer, minWriterVersion as integer, readerFeatures as string[], writerFeatures as string[]),",
+				"          add as (path as string, partitionValues as ({} as string), size as integer, modificationTime as integer, dataChange as boolean, stats as string, tags as (INSERTION_TIME as string, MIN_INSERTION_TIME as string, MAX_INSERTION_TIME as string, OPTIMIZE_TARGET_SIZE as string))",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinkBlob"
 			]
 		}
 	}
