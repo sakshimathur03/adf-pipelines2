@@ -11,17 +11,37 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AdvantureWorkDb'"
 		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
 		"AdvantureWorkDb_properties_typeProperties_server": {
 			"type": "string",
-			"defaultValue": "data03.database.windows.net"
+			"defaultValue": "dfderver.database.windows.net"
 		},
 		"AdvantureWorkDb_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "adfData"
+			"defaultValue": "data03"
 		},
 		"AdvantureWorkDb_properties_typeProperties_userName": {
 			"type": "string",
-			"defaultValue": "CloudSA6c8b355a"
+			"defaultValue": "sakshi"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "dfderver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "data3425"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sakshi"
 		},
 		"containerUri": {
 			"type": "string",
@@ -53,6 +73,12 @@
 					"AdvantureWorkDb_password": {
 						"value": "[parameters('AdvantureWorkDb_password')]"
 					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
 					"AdvantureWorkDb_properties_typeProperties_server": {
 						"value": "[parameters('AdvantureWorkDb_properties_typeProperties_server')]"
 					},
@@ -61,6 +87,15 @@
 					},
 					"AdvantureWorkDb_properties_typeProperties_userName": {
 						"value": "[parameters('AdvantureWorkDb_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
 					}
 				}
 			},
