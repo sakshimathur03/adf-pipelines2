@@ -1,0 +1,9 @@
+{
+	"name": "adf-sakshi03",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0ad63a71-47be-45ab-af28-0fbab6ac99ee",
+		"tenantId": "779f9d66-8cb4-494e-8449-eaaa572050fe"
+	}
+}

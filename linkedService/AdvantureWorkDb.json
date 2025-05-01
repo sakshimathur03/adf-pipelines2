@@ -1,0 +1,17 @@
+{
+	"name": "AdvantureWorkDb",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "data03.database.windows.net",
+			"database": "adfData",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "CloudSA6c8b355a",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDQ4NjcxRERGLTFFNUItNDJDQi1CNjEwLTBBQjhDOTMwOTk3Ml80NTIxMDI3MS1jYjFhLTQzYzAtYjg2Zi0yNDM4MjJiMDY4MGUiDQp9"
+		}
+	}
+}
