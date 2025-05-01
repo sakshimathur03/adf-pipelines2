@@ -2,7 +2,7 @@
 	"name": "ProductsTable",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AdvantureWorkDb",
+			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
