@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-sakshi03"
+		},
+		"AdvantureWorkDb_password": {
+			"value": ""
+		},
+		"AdvantureWorkDb_properties_typeProperties_server": {
+			"value": "data03.database.windows.net"
+		},
+		"AdvantureWorkDb_properties_typeProperties_database": {
+			"value": "adfData"
+		},
+		"AdvantureWorkDb_properties_typeProperties_userName": {
+			"value": "CloudSA6c8b355a"
+		}
+	}
+}
