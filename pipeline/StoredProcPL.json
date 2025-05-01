@@ -45,7 +45,7 @@
 				]
 			},
 			{
-				"name": "Stored procedure1",
+				"name": "SP Update ModifiedDate",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -62,7 +62,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[UpdateProducts]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
