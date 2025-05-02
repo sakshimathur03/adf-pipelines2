@@ -5,6 +5,15 @@
 		"factoryName": {
 			"value": "adf-sakshi03"
 		},
+		"ADLS_accountKey": {
+			"value": ""
+		},
+		"ADLSGen2_connectionString": {
+			"value": ""
+		},
+		"ADLSTripData_accountKey": {
+			"value": ""
+		},
 		"AdvantureWorkDb_password": {
 			"value": ""
 		},
@@ -13,6 +22,15 @@
 		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
+		},
+		"TaxiTripDb_password": {
+			"value": ""
+		},
+		"ADLS_properties_typeProperties_url": {
+			"value": "https://dbstorage3dxpnvuii2joc.dfs.core.windows.net/"
+		},
+		"ADLSTripData_properties_typeProperties_url": {
+			"value": "https://movies3425.dfs.core.windows.net/"
 		},
 		"AdvantureWorkDb_properties_typeProperties_server": {
 			"value": "dfderver.database.windows.net"
@@ -30,6 +48,15 @@
 			"value": "data3425"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sakshi"
+		},
+		"TaxiTripDb_properties_typeProperties_server": {
+			"value": "dfderver.database.windows.net"
+		},
+		"TaxiTripDb_properties_typeProperties_database": {
+			"value": "taxi-data"
+		},
+		"TaxiTripDb_properties_typeProperties_userName": {
 			"value": "sakshi"
 		}
 	}
