@@ -35,6 +35,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'TaxiTripDb'"
 		},
+		"TripAggregateBlob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'TripAggregateBlob'"
+		},
 		"ADLS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dbstorage3dxpnvuii2joc.dfs.core.windows.net/"
@@ -127,6 +131,9 @@
 					"TaxiTripDb_password": {
 						"value": "[parameters('TaxiTripDb_password')]"
 					},
+					"TripAggregateBlob_connectionString": {
+						"value": "[parameters('TripAggregateBlob_connectionString')]"
+					},
 					"ADLS_properties_typeProperties_url": {
 						"value": "[parameters('ADLS_properties_typeProperties_url')]"
 					},
@@ -163,6 +170,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adf-sakshi03_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-sakshi03_ArmTemplate_0')]"
+			]
 		}
 	]
 }

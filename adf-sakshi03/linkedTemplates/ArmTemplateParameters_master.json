@@ -26,6 +26,9 @@
 		"TaxiTripDb_password": {
 			"value": ""
 		},
+		"TripAggregateBlob_connectionString": {
+			"value": ""
+		},
 		"ADLS_properties_typeProperties_url": {
 			"value": "https://dbstorage3dxpnvuii2joc.dfs.core.windows.net/"
 		},
