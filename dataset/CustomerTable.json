@@ -1,0 +1,12 @@
+{
+	"name": "CustomerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AdvantureWorks",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
