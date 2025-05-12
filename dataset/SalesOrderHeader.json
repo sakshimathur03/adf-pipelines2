@@ -1,0 +1,16 @@
+{
+	"name": "SalesOrderHeader",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlData",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Sales",
+			"table": "SalesOrderDetail"
+		}
+	}
+}
