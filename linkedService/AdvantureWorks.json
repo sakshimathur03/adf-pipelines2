@@ -1,0 +1,17 @@
+{
+	"name": "AdvantureWorks",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "dfderver.database.windows.net",
+			"database": "AdventureWorksDW2019",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sakshi",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhCNDIyQjY4LUNDQjYtNEIzMi1CMzc1LUEzRjA2NDQyQUVDM182Yzg2YTE5Zi1jZWJkLTRjYzUtOTk4Yy01MTA1ZGVjZmZkODIiDQp9"
+		}
+	}
+}
